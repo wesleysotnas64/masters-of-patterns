@@ -11,6 +11,8 @@ public class NodeCanvas : MonoBehaviour
     public List<GameObject> buttonOptions;
 
     public Node node;
+    public bool isTyping;
+    public float delay;
 
     void Start(){
         GameObject n = Resources.Load<GameObject>("Node_"+1.ToString());
@@ -20,9 +22,7 @@ public class NodeCanvas : MonoBehaviour
 
     private void RenderNodeInCanvas(){
         CleanTextInCanvas();
-        foreach (string text in node.text){
-            textNode.text += text + "\n";
-        }
+        StartCoroutine(TypewriteText());
 
         int qtdOptions = node.nextNode.Count;
         for(int i = 0; i < qtdOptions; i++)
@@ -37,6 +37,49 @@ public class NodeCanvas : MonoBehaviour
             }
         }
 
+    }
+
+    IEnumerator TypewriteText(){
+        isTyping = true;
+
+        foreach (string text in node.text){
+            
+            for(int i = 0; i < text.Length; i++)
+            {
+                textNode.text += text[i];
+                yield return new WaitForSeconds(delay);
+            }
+
+            // Verifica se este é o último texto antes de adicionar a quebra de linha
+            if (text != node.text[node.text.Count - 1])
+            {
+                textNode.text += "\n\n";
+            }
+
+        }
+
+        isTyping = false;
+
+    }
+
+    public void SkipTyping()
+    {
+        if (isTyping)
+        {
+            StopCoroutine(TypewriteText());
+            CleanTextInCanvas();
+            int lastIndex = node.text.Count - 1;
+            for (int i = 0; i < node.text.Count; i++)
+            {
+                textNode.text += node.text[i];
+                
+                if (i != lastIndex)
+                {
+                    textNode.text += "\n\n";
+                }
+            }
+            isTyping = false;
+        }
     }
 
     private void CleanTextInCanvas(){

@@ -48,7 +48,8 @@ MonoBehaviour:
   text:
   - "Voc\xEA encontra uma corda suspensa sobre o galho de uma \xE1rvore."
   - "J\xE1 \xE9 tarde ao notar que a corda era uma serpente."
-  - "Voc\xEA se sente sonolento e n\xE3o levanta mais.\\nFIM DE JOGO!"
+  - "Voc\xEA se sente sonolento e n\xE3o levanta mais."
+  - FIM DE JOGO!
   option:
   - "Voltar ao in\xEDcio"
   nextNode: 01000000
