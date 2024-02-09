@@ -9,20 +9,35 @@ public class NodeCanvas : MonoBehaviour
     public Text textNode;
     public List<Text> textOptions;
     public List<GameObject> buttonOptions;
+    public GameObject buttonSkip;
 
     public Node node;
-    public bool isTyping;
+    public bool skipping;
     public float delay;
 
     void Start(){
         GameObject n = Resources.Load<GameObject>("Node_"+1.ToString());
         node = n.GetComponent<Node>();
-        RenderNodeInCanvas();
+        RenderNode();
     }
 
-    private void RenderNodeInCanvas(){
+    void Update(){
+        if (buttonSkip != null) buttonSkip.SetActive(!skipping);
+    }
+
+    private void RenderNode(){
         CleanTextInCanvas();
         StartCoroutine(TypewriteText());
+    }
+
+    private void RenderNodeOptionsInCanvas(){
+        for(int i = 0; i < 4; i++)
+        {
+            buttonOptions[i].SetActive(true);
+        }
+        foreach(Text text in textOptions){
+            text.text = "";
+        }
 
         int qtdOptions = node.nextNode.Count;
         for(int i = 0; i < qtdOptions; i++)
@@ -36,67 +51,54 @@ public class NodeCanvas : MonoBehaviour
                 buttonOptions[i].SetActive(false);
             }
         }
-
     }
 
     IEnumerator TypewriteText(){
-        isTyping = true;
+        skipping = false;
 
+        int iterarion = 0;
         foreach (string text in node.text){
             
             for(int i = 0; i < text.Length; i++)
             {
                 textNode.text += text[i];
-                yield return new WaitForSeconds(delay);
+                yield return new WaitForSeconds(skipping ? 0 : delay);
             }
 
-            // Verifica se este é o último texto antes de adicionar a quebra de linha
-            if (text != node.text[node.text.Count - 1])
-            {
+            if (iterarion != node.text.Count - 1){
                 textNode.text += "\n\n";
             }
 
+            iterarion++;
         }
 
-        isTyping = false;
+        skipping = true;
 
-    }
+        RenderNodeOptionsInCanvas();
 
-    public void SkipTyping()
-    {
-        if (isTyping)
-        {
-            StopCoroutine(TypewriteText());
-            CleanTextInCanvas();
-            int lastIndex = node.text.Count - 1;
-            for (int i = 0; i < node.text.Count; i++)
-            {
-                textNode.text += node.text[i];
-                
-                if (i != lastIndex)
-                {
-                    textNode.text += "\n\n";
-                }
-            }
-            isTyping = false;
-        }
     }
 
     private void CleanTextInCanvas(){
         textNode.text = "";
         for(int i = 0; i < 4; i++)
         {
-            buttonOptions[i].SetActive(true);
+            buttonOptions[i].SetActive(false);
         }
         foreach(Text text in textOptions){
             text.text = "";
         }
     }
 
+    //Chamadas externas. Botões da interface
+    public void SkipTyping()
+    {
+        skipping = true;
+    }
+
     public void LoadNode(int btnId){
         int idNode = node.nextNode[btnId];
         GameObject n = Resources.Load<GameObject>("Node_"+idNode.ToString());
         node = n.GetComponent<Node>();
-        RenderNodeInCanvas();
+        RenderNode();
     }
 }
