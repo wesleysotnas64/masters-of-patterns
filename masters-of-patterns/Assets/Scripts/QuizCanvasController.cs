@@ -31,6 +31,9 @@ public class QuizCanvasController : MonoBehaviour
 
     void Start()
     {
+        //Limpar todos os campos
+        //Selecionar inimigo
+        //Selecionar questões para o buffer
         
     }
 
