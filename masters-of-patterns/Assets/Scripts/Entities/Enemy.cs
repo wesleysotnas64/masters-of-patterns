@@ -8,15 +8,7 @@ public class Enemy : MonoBehaviour
     public int maxHealthPoints;
     public int attackInterval;
     public int maxAttackInterval;
-    public int baseDamage;
+    public int damage;
     
-    void Start()
-    {
-        
-    }
 
-    void Update()
-    {
-        
-    }
 }
