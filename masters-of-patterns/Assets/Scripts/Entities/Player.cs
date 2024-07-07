@@ -16,10 +16,10 @@ public class Player : MonoBehaviour
         cameraShake = GameObject.Find("MainCamera").GetComponent<CameraShake>();
     }
 
-    public void Strike(int damage)
+    public void Strike(int _damage)
     {
         cameraShake.Shake();
-        healthPoints -= damage;
+        healthPoints -= _damage;
         if (healthPoints <= 0)
         {
             healthPoints = 0;

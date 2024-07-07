@@ -12,9 +12,9 @@ public class QuizCanvasController : MonoBehaviour
     public TMP_Text textQuestion;
     public Image imgHealthPlayer;
     public Image imgHealthPlayerEffect;
-    public Image imgHealthEnemy;
-    public Image imgHealthEnemyEffect;
-    public Image imgAttackEnemy;
+    public Image imgHealthMonster;
+    public Image imgHealthMonsterEffect;
+    public Image imgAttackMonster;
     public List<GameObject> listOptionButton;
     public List<GameObject> listToolsButton;
 
@@ -30,8 +30,9 @@ public class QuizCanvasController : MonoBehaviour
     public Player player;
     public TMP_Text textPlayerHealth;
 
-    [Header("Monster (Enemy)")]
+    [Header("Monste")]
     public Monster monster;
+    public bool firstCall;
 
     void Start()
     {
@@ -39,8 +40,10 @@ public class QuizCanvasController : MonoBehaviour
         InitCanvas();
 
         //Selecionar questão para o buffer
-        // currentQuestion = questionHandler.GetRandomQuestioin();
-        
+        firstCall = true;
+        currentQuestion = questionHandler.GetRandomQuestioin();
+        StartCoroutine(TypewriteText());
+
     }
 
     void Update()
@@ -48,25 +51,47 @@ public class QuizCanvasController : MonoBehaviour
         UpdateCanvas();
     }
 
+    public void SelectQuestion(int index)
+    {
+        if(currentQuestion.isCorrect[index])
+        {
+            listOptionButton[index].GetComponent<Image>().color = Color.HSVToRGB(125.0f/360.0f, 0.5f, 0.75f); //Cor do botão
+
+            //Causa dano no monstro
+            monster.Strike(player.damage);
+            float healthCondition = (float) monster.healthPoints/monster.maxHealthPoints;
+            float hValue = 125.0f * healthCondition;
+            imgHealthMonster.color = Color.HSVToRGB(hValue/360.0f, 0.5f, 0.75f);
+        }
+        else
+        {
+            listOptionButton[index].GetComponent<Image>().color = Color.HSVToRGB(0.0f/360.0f, 0.5f, 0.75f); //Cor do botão
+            for(int i = 0; i < 4; i++)
+            {
+                if(currentQuestion.isCorrect[i])
+                {
+                    listOptionButton[i].GetComponent<Image>().color = Color.HSVToRGB(125.0f/360.0f, 0.5f, 0.75f);
+                }
+            }
+
+            //Causa dano no player
+            player.Strike(monster.damage);
+            float healthCondition = (float) player.healthPoints/player.maxHealthPoints;
+            float hValue = 125.0f * healthCondition;
+            imgHealthPlayer.color = Color.HSVToRGB(hValue/360.0f, 0.5f, 0.75f);
+        }
+    }
+
     private void InitCanvas()
     {
         textQuestion.text = "";
         textPlayerHealth.text = player.healthPoints.ToString()+"/"+player.maxHealthPoints.ToString();
 
-        foreach(GameObject btn in listOptionButton)
-        {
-            btn.GetComponent<Button>().interactable = false;
-        }
-        foreach(GameObject btn in listToolsButton)
-        {
-            btn.GetComponent<Button>().interactable = false;
-        }
-
-        btnNext.interactable = false;
+        DisableOptionButtons();
 
         imgHealthPlayer.rectTransform.localScale = new Vector3((float)player.healthPoints/player.maxHealthPoints, 1, 1);
-        imgHealthEnemy.rectTransform.localScale = new Vector3((float)monster.healthPoints/monster.maxHealthPoints, 1, 1);
-        imgAttackEnemy.rectTransform.localScale = new Vector3(monster.currentTimeAttack/monster.timeAttack, 1, 1);
+        imgHealthMonster.rectTransform.localScale = new Vector3((float)monster.healthPoints/monster.maxHealthPoints, 1, 1);
+        imgAttackMonster.rectTransform.localScale = new Vector3(monster.currentTimeAttack/monster.timeAttack, 1, 1);
     }
 
     private void UpdateCanvas()
@@ -74,8 +99,8 @@ public class QuizCanvasController : MonoBehaviour
         textPlayerHealth.text = player.healthPoints.ToString()+"/"+player.maxHealthPoints.ToString();
 
         imgHealthPlayer.rectTransform.localScale = new Vector3((float)player.healthPoints/player.maxHealthPoints, 1, 1);
-        imgHealthEnemy.rectTransform.localScale = new Vector3((float)monster.healthPoints/monster.maxHealthPoints, 1, 1);
-        imgAttackEnemy.rectTransform.localScale = new Vector3(monster.currentTimeAttack/monster.timeAttack, 1, 1);
+        imgHealthMonster.rectTransform.localScale = new Vector3((float)monster.healthPoints/monster.maxHealthPoints, 1, 1);
+        imgAttackMonster.rectTransform.localScale = new Vector3(monster.currentTimeAttack/monster.timeAttack, 1, 1);
 
         //LifeEffect
         imgHealthPlayerEffect.rectTransform.localScale = Vector3.Lerp(
@@ -83,10 +108,96 @@ public class QuizCanvasController : MonoBehaviour
             imgHealthPlayer.rectTransform.localScale,
             Time.deltaTime * 5
         );
-        imgHealthEnemyEffect.rectTransform.localScale = Vector3.Lerp(
-            imgHealthEnemyEffect.rectTransform.localScale,
-            imgHealthEnemy.rectTransform.localScale,
+        imgHealthMonsterEffect.rectTransform.localScale = Vector3.Lerp(
+            imgHealthMonsterEffect.rectTransform.localScale,
+            imgHealthMonster.rectTransform.localScale,
             Time.deltaTime * 5
         );
+    }
+
+    IEnumerator TypewriteText()
+    {
+
+        // skipping = false;
+
+        int iteration = 0;
+        foreach (string text in currentQuestion.text){
+            
+            for(int i = 0; i < text.Length; i++)
+            {
+                textQuestion.text += text[i];
+                yield return null;
+                // yield return new WaitForSeconds(skipping ? 0 : delay);
+            }
+
+            if (iteration != currentQuestion.text.Count - 1){
+                textQuestion.text += "\n\n";
+            }
+
+            iteration++;
+        }
+
+        textQuestion.text += "\n\n";
+        List<string> auxOptions = new List<string>
+        {
+            "A - " + currentQuestion.option[0],
+            "B - " + currentQuestion.option[1],
+            "C - " + currentQuestion.option[2],
+            "D - " + currentQuestion.option[3]
+        };
+
+        iteration = 0;
+        foreach (string text in auxOptions){
+            for(int i = 0; i < text.Length; i++)
+            {
+                textQuestion.text += text[i];
+                yield return null;
+                // yield return new WaitForSeconds(skipping ? 0 : delay);
+            }
+
+            if (iteration != currentQuestion.option.Count - 1){
+                textQuestion.text += "\n\n";
+            }
+
+            iteration++;
+        }
+
+        EnableOptionButtons();
+
+        if(firstCall)
+        {
+            monster.ready = true;;
+            firstCall = false;
+        }
+    }
+
+    private void EnableOptionButtons()
+    {
+        foreach(GameObject btn in listOptionButton)
+        {
+            btn.GetComponent<Button>().interactable = true;
+        }
+
+        foreach(GameObject btn in listToolsButton)
+        {
+            btn.GetComponent<Button>().interactable = true;
+        }
+
+        btnNext.interactable = true;
+    }
+
+    private void DisableOptionButtons()
+    {
+        foreach(GameObject btn in listOptionButton)
+        {
+            btn.GetComponent<Button>().interactable = false;
+        }
+
+        foreach(GameObject btn in listToolsButton)
+        {
+            btn.GetComponent<Button>().interactable = false;
+        }
+
+        btnNext.interactable = false;
     }
 }

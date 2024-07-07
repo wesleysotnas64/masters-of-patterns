@@ -177,14 +177,14 @@ public class QuizClassRoomCanvas : MonoBehaviour
     {
         if(currentQuestion.isCorrect[index])
         {
-            listOptionButton[index].GetComponent<Image>().color = Color.HSVToRGB(120.0f/360.0f, 0.5f, 1.0f);
+            listOptionButton[index].GetComponent<Image>().color = Color.HSVToRGB(125.0f/360.0f, 0.5f, 0.75f);
 
             //Causa dano no monstro
             monsterHealthCurrent -= playerDamage;
             if(monsterHealthCurrent < 0) monsterHealthCurrent = 0;
             imgHealthMonster.rectTransform.localScale = new Vector3(monsterHealthCurrent/monsterHealth, 1, 1);
-            float hValue = 120.0f * monsterHealthCurrent/monsterHealth;
-            imgHealthMonster.color = Color.HSVToRGB(hValue/360.0f, 0.5f, 1.0f);
+            float hValue = 125.0f * monsterHealthCurrent/monsterHealth;
+            imgHealthMonster.color = Color.HSVToRGB(hValue/360.0f, 0.5f, 0.75f);
         }
         else
         {
@@ -193,7 +193,7 @@ public class QuizClassRoomCanvas : MonoBehaviour
             {
                 if(currentQuestion.isCorrect[i])
                 {
-                    listOptionButton[i].GetComponent<Image>().color = Color.HSVToRGB(120.0f/360.0f, 0.5f, 1.0f);
+                    listOptionButton[i].GetComponent<Image>().color = Color.HSVToRGB(5.0f/360.0f, 0.5f, 0.75f);
                 }
             }
 
@@ -201,8 +201,8 @@ public class QuizClassRoomCanvas : MonoBehaviour
             playerHealthCurrent -= monsterDamage;
             if(playerHealthCurrent < 0) playerHealthCurrent = 0;
             imgHealthPlayer.rectTransform.localScale = new Vector3(playerHealthCurrent/playerHealth, 1, 1);
-            float hValue = 120.0f * playerHealthCurrent/playerHealth;
-            imgHealthPlayer.color = Color.HSVToRGB(hValue/360.0f, 0.5f, 1.0f);
+            float hValue = 125.0f * playerHealthCurrent/playerHealth;
+            imgHealthPlayer.color = Color.HSVToRGB(hValue/360.0f, 0.5f, 0.75f);
         }
 
         btnNext.interactable = true;

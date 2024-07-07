@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -390257805, guid: 9a22ba216389a8742924b364469d3647, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9716981, g: 0.9716981, b: 0.9716981, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
@@ -98,11 +98,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 486f5ad8007a3c74daf02287e7359d77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 7
-  maxHealthPoints: 10
-  timeAttack: 5
+  healthPoints: 15
+  maxHealthPoints: 15
+  timeAttack: 10
   currentTimeAttack: 0
-  damage: 1
+  damage: 3
   player: {fileID: 0}
   anim: {fileID: 0}
   attacking: 0

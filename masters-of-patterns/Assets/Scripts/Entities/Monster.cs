@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
+    public bool ready;
     public int healthPoints;
     public int maxHealthPoints;
     public float timeAttack;
@@ -28,6 +29,7 @@ public class Monster : MonoBehaviour
 
     void Start()
     {
+        ready = false;
         currentTimeAttack = 0;
         player = GameObject.Find("Player").GetComponent<Player>();
 
@@ -36,8 +38,6 @@ public class Monster : MonoBehaviour
         attacking = false;
         dying = false;
         
-        
-
         //Attack Controller
         chargingAttack = true;
         preparing = false;
@@ -50,10 +50,24 @@ public class Monster : MonoBehaviour
 
     void Update()
     {
-        ChargeAttack();
-        HitControll();
-        AnimControll();
-        HitPlayer();
+        if(ready)
+        {
+            ChargeAttack();
+            HitControll();
+            AnimControll();
+            HitPlayer();
+        }
+    }
+
+    public void Strike(int _damage)
+    {
+        healthPoints -= _damage;
+        if (healthPoints <= 0)
+        {
+            healthPoints = 0;
+        }
+
+        //Coroutine para animar dano;
     }
 
     private void HitPlayer()

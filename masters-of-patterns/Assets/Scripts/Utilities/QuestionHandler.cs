@@ -11,9 +11,33 @@ public class QuestionHandler : MonoBehaviour
     public int maxQuestionsCalled;
     public string subject;
 
+    //Provisório
+    private int minId; // Inclusivo
+    private int maxId; // Exclusivo
+
     void Start()
     {
         calledQuestionsId = new List<int>();
+        InitMaxMinIds();
+    }
+
+    private void InitMaxMinIds()
+    {
+        switch(subject)
+        {
+            case "Metodologias":
+                minId = 1;
+                maxId = 15;
+                break;
+
+            case "PrincipiosProjeto":
+                minId = 16;
+                maxId = 25;
+                break;
+
+            default:
+                break;
+        }
     }
 
     public Question GetRandomQuestioin()
@@ -24,7 +48,7 @@ public class QuestionHandler : MonoBehaviour
 
             if(calledQuestionsId.Count >= maxQuestionsCalled) calledQuestionsId.Clear();
 
-            randomId = Random.Range(0, maxQuestionsCalled + 1);
+            randomId = Random.Range(minId, maxId + 1);
 
             if(!calledQuestionsId.Contains(randomId))
             {
