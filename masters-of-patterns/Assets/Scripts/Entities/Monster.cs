@@ -24,6 +24,7 @@ public class Monster : MonoBehaviour
     public bool hitting;
     public bool recovering;
     public bool hit;
+    public bool isAttackOpportunity;
     public List<float> hitTime; //[0] initAttack | [1] activeAttack | [2] recoverAttack
     public float currentHitTime;
 
@@ -44,6 +45,7 @@ public class Monster : MonoBehaviour
         hitting = false;
         recovering = false;
         hit = false;
+        isAttackOpportunity = false;
         currentHitTime = 0.0f;
 
     }
@@ -74,8 +76,16 @@ public class Monster : MonoBehaviour
     {
         if(hit)
         {
-            player.Strike(damage);
-            hit = false;
+            if(isAttackOpportunity)
+            {
+                player.Strike(damage/2);
+                hit = false;
+            }
+            else
+            {
+                player.Strike(damage);
+                hit = false;
+            }
         }
     }
 
@@ -86,11 +96,24 @@ public class Monster : MonoBehaviour
             currentTimeAttack += Time.deltaTime;
             if(currentTimeAttack > timeAttack)
             {
-                chargingAttack = false;
-                attacking = true;
-                currentHitTime = 0.0f;
+                Attack();
             }
         }
+    }
+
+    public void Attack()
+    {
+        chargingAttack = false;
+        attacking = true;
+        currentHitTime = 0.0f;
+    }
+
+    //Ataque de oportunidade
+    public void AttackOpportunity()
+    {
+        chargingAttack = false;
+        attacking = true;
+        isAttackOpportunity = true;
     }
 
     private void HitControll()
@@ -125,10 +148,12 @@ public class Monster : MonoBehaviour
                 recovering = false;
                 
                 currentHitTime = 0;
-                currentTimeAttack = 0.0f;
+
+                currentTimeAttack = isAttackOpportunity ? currentTimeAttack/2 : 0.0f;
 
                 attacking = false;
                 chargingAttack = true;
+                isAttackOpportunity = false;
             }
         }
     }

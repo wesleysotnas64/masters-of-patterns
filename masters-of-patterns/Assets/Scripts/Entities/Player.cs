@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
 
     public void Strike(int _damage)
     {
-        cameraShake.Shake();
+        cameraShake.Shake(_damage);
         healthPoints -= _damage;
         if (healthPoints <= 0)
         {

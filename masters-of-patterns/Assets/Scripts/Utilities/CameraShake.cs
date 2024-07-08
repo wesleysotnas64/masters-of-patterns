@@ -21,11 +21,6 @@ public class CameraShake : MonoBehaviour
         StartCoroutine(ShakeCoroutine());
     }
 
-    void Update()
-    {
-        if(Input.GetKeyDown("space")) Shake();
-    }
-
     IEnumerator ShakeCoroutine()
     {
         while(true)
@@ -55,12 +50,35 @@ public class CameraShake : MonoBehaviour
         
     }
 
-    public void Shake()
+    public void Shake(int _magnitude)
     {
+        SelectMagnitude(_magnitude);
         if(shaking == false)
         {
             shaking = true;
             elapsed = 0.0f;
+        }
+    }
+
+    private void SelectMagnitude(int _magnitude)
+    {
+        switch(_magnitude)
+        {
+            case 1:
+                magnitude = 0.1f;
+                break;
+            
+            case 2:
+                magnitude = 0.2f;
+                break;
+
+            case 3:
+                magnitude = 0.3f;
+                break;
+            
+            default:
+                magnitude = 0.1f;
+                break;
         }
     }
 }

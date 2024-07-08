@@ -51,6 +51,13 @@ public class QuizCanvasController : MonoBehaviour
         UpdateCanvas();
     }
 
+    public void NextQuestion()
+    {
+        InitCanvas();
+        currentQuestion = questionHandler.GetRandomQuestioin();
+        StartCoroutine(TypewriteText());
+    }
+
     public void SelectQuestion(int index)
     {
         if(currentQuestion.isCorrect[index])
@@ -75,11 +82,14 @@ public class QuizCanvasController : MonoBehaviour
             }
 
             //Causa dano no player
-            player.Strike(monster.damage);
+            monster.AttackOpportunity();
             float healthCondition = (float) player.healthPoints/player.maxHealthPoints;
             float hValue = 125.0f * healthCondition;
             imgHealthPlayer.color = Color.HSVToRGB(hValue/360.0f, 0.5f, 0.75f);
         }
+
+        DisableOptionButtons();
+        btnNext.interactable = true;
     }
 
     private void InitCanvas()
@@ -88,10 +98,16 @@ public class QuizCanvasController : MonoBehaviour
         textPlayerHealth.text = player.healthPoints.ToString()+"/"+player.maxHealthPoints.ToString();
 
         DisableOptionButtons();
+        btnNext.interactable = false;
 
         imgHealthPlayer.rectTransform.localScale = new Vector3((float)player.healthPoints/player.maxHealthPoints, 1, 1);
         imgHealthMonster.rectTransform.localScale = new Vector3((float)monster.healthPoints/monster.maxHealthPoints, 1, 1);
         imgAttackMonster.rectTransform.localScale = new Vector3(monster.currentTimeAttack/monster.timeAttack, 1, 1);
+
+        foreach(GameObject btn in listOptionButton)
+        {
+            btn.GetComponent<Image>().color = Color.white;
+        }
     }
 
     private void UpdateCanvas()
@@ -171,19 +187,28 @@ public class QuizCanvasController : MonoBehaviour
         }
     }
 
+    private void EnableToolsButtons()
+    {
+        foreach(GameObject btn in listToolsButton)
+        {
+            btn.GetComponent<Button>().interactable = true;
+        }
+    }
+
+    private void DisableToolsButtons()
+    {
+        foreach(GameObject btn in listToolsButton)
+        {
+            btn.GetComponent<Button>().interactable = false;
+        }
+    }
+
     private void EnableOptionButtons()
     {
         foreach(GameObject btn in listOptionButton)
         {
             btn.GetComponent<Button>().interactable = true;
         }
-
-        foreach(GameObject btn in listToolsButton)
-        {
-            btn.GetComponent<Button>().interactable = true;
-        }
-
-        btnNext.interactable = true;
     }
 
     private void DisableOptionButtons()
@@ -192,12 +217,5 @@ public class QuizCanvasController : MonoBehaviour
         {
             btn.GetComponent<Button>().interactable = false;
         }
-
-        foreach(GameObject btn in listToolsButton)
-        {
-            btn.GetComponent<Button>().interactable = false;
-        }
-
-        btnNext.interactable = false;
     }
 }
