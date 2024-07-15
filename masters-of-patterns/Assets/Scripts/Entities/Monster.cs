@@ -17,6 +17,7 @@ public class Monster : MonoBehaviour
     public Animator anim;
     public bool attacking;
     public bool dying;
+    public bool striking;
 
     //Attacking Controller
     public bool chargingAttack;
@@ -27,6 +28,9 @@ public class Monster : MonoBehaviour
     public bool isAttackOpportunity;
     public List<float> hitTime; //[0] initAttack | [1] activeAttack | [2] recoverAttack
     public float currentHitTime;
+
+    //Striked Controller
+    public float strikingTime;
 
     void Start()
     {
@@ -48,6 +52,9 @@ public class Monster : MonoBehaviour
         isAttackOpportunity = false;
         currentHitTime = 0.0f;
 
+        //Striked Controller
+        striking = false;
+
     }
 
     void Update()
@@ -63,13 +70,30 @@ public class Monster : MonoBehaviour
 
     public void Strike(int _damage)
     {
+        
         healthPoints -= _damage;
         if (healthPoints <= 0)
         {
             healthPoints = 0;
         }
 
+        currentTimeAttack = 0.0f;
+
         //Coroutine para animar dano;
+        StartCoroutine(StrikeCoroutine());
+    }
+
+    IEnumerator StrikeCoroutine()
+    {
+        float elapsed = 0.0f;
+
+        striking = true;
+        while(elapsed <= strikingTime)
+        {
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        striking = false;
     }
 
     private void HitPlayer()
@@ -162,6 +186,7 @@ public class Monster : MonoBehaviour
     {
         anim.SetBool("Attacking", attacking);
         anim.SetBool("Dying", dying);
+        anim.SetBool("Striking", striking);
     }
 }
 
