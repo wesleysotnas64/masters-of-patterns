@@ -31,6 +31,7 @@ public class Monster : MonoBehaviour
 
     //Striked Controller
     public float strikingTime;
+    public SpriteRenderer spriteRenderer;
 
     void Start()
     {
@@ -54,6 +55,7 @@ public class Monster : MonoBehaviour
 
         //Striked Controller
         striking = false;
+        spriteRenderer = GetComponent<SpriteRenderer>();
 
     }
 
@@ -85,12 +87,17 @@ public class Monster : MonoBehaviour
 
     IEnumerator StrikeCoroutine()
     {
-        float elapsed = 0.0f;
+        float elapsed = strikingTime;
 
         striking = true;
-        while(elapsed <= strikingTime)
+        while(elapsed > 0)
         {
-            elapsed += Time.deltaTime;
+            elapsed -= Time.deltaTime;
+            elapsed = elapsed < 0 ? 0 : elapsed;
+
+            //Anima a cor do player de vermelho para branco
+            spriteRenderer.color = Color.HSVToRGB(0, elapsed/strikingTime, 1);
+
             yield return null;
         }
         striking = false;
