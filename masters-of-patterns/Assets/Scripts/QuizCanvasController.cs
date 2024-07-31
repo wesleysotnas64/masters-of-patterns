@@ -66,9 +66,6 @@ public class QuizCanvasController : MonoBehaviour
 
             //Causa dano no monstro
             monster.Strike(player.damage);
-            float healthCondition = (float) monster.healthPoints/monster.maxHealthPoints;
-            float hValue = 125.0f * healthCondition;
-            imgHealthMonster.color = Color.HSVToRGB(hValue/360.0f, 0.5f, 0.75f);
         }
         else
         {
@@ -83,9 +80,6 @@ public class QuizCanvasController : MonoBehaviour
 
             //Causa dano no player
             monster.AttackOpportunity();
-            float healthCondition = (float) player.healthPoints/player.maxHealthPoints;
-            float hValue = 125.0f * healthCondition;
-            imgHealthPlayer.color = Color.HSVToRGB(hValue/360.0f, 0.5f, 0.75f);
         }
 
         DisableOptionButtons();
@@ -113,6 +107,15 @@ public class QuizCanvasController : MonoBehaviour
     private void UpdateCanvas()
     {
         textPlayerHealth.text = player.healthPoints.ToString()+"/"+player.maxHealthPoints.ToString();
+
+        //Atualiza coloração da barra de vida
+        float healthCondition = (float) player.healthPoints/player.maxHealthPoints;
+        float hValue = 125.0f * healthCondition;
+        imgHealthPlayer.color = Color.HSVToRGB(hValue/360.0f, 0.5f, 0.75f);
+
+        healthCondition = (float) monster.healthPoints/monster.maxHealthPoints;
+        hValue = 125.0f * healthCondition;
+        imgHealthMonster.color = Color.HSVToRGB(hValue/360.0f, 0.5f, 0.75f);
 
         imgHealthPlayer.rectTransform.localScale = new Vector3((float)player.healthPoints/player.maxHealthPoints, 1, 1);
         imgHealthMonster.rectTransform.localScale = new Vector3((float)monster.healthPoints/monster.maxHealthPoints, 1, 1);

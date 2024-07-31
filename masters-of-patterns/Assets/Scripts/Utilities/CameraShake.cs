@@ -65,19 +65,23 @@ public class CameraShake : MonoBehaviour
         switch(_magnitude)
         {
             case 1:
-                magnitude = 0.1f;
+                magnitude = 0.05f;
                 break;
             
             case 2:
-                magnitude = 0.2f;
+                magnitude = 0.1f;
                 break;
 
             case 3:
+                magnitude = 0.2f;
+                break;
+
+            case 4:
                 magnitude = 0.3f;
                 break;
             
             default:
-                magnitude = 0.1f;
+                magnitude = 0.05f;
                 break;
         }
     }

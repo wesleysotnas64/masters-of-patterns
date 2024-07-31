@@ -5,29 +5,39 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
-    public bool ready;
+    [Header("Atributos")]
+    
     public int healthPoints;
     public int maxHealthPoints;
     public float timeAttack;
     public float currentTimeAttack;
     public int damage;
-    public Player player;
 
     //Animator
-    public Animator anim;
     public bool attacking;
     public bool dying;
     public bool striking;
+    public bool opportunity;
+    
 
-    //Attacking Controller
+    [Header("Estados")]
+    public bool ready;
+
+    [Header("Componentes")]
+    public Player player;
+    public Animator anim;
+
+    
+
+    [Header("Controle de Ataque")]
     public bool chargingAttack;
     public bool preparing;
     public bool hitting;
     public bool recovering;
     public bool hit;
-    public bool isAttackOpportunity;
-    public List<float> hitTime; //[0] initAttack | [1] activeAttack | [2] recoverAttack
-    public float currentHitTime;
+    public int blow; //[0] basic attack | [1] opportunity
+    public List<Blow> blows;
+    public float currentBlowTime;
 
     //Striked Controller
     public float strikingTime;
@@ -50,8 +60,7 @@ public class Monster : MonoBehaviour
         hitting = false;
         recovering = false;
         hit = false;
-        isAttackOpportunity = false;
-        currentHitTime = 0.0f;
+        currentBlowTime = 0.0f;
 
         //Striked Controller
         striking = false;
@@ -61,10 +70,16 @@ public class Monster : MonoBehaviour
 
     void Update()
     {
+
+        //Testando ataques
+        if(Input.GetKeyDown("1")) Attack();
+        if(Input.GetKeyDown("2")) AttackOpportunity();
+        
+
         if(ready)
         {
             ChargeAttack();
-            HitControll();
+            BlowControll();
             AnimControll();
             HitPlayer();
         }
@@ -77,12 +92,21 @@ public class Monster : MonoBehaviour
         if (healthPoints <= 0)
         {
             healthPoints = 0;
+            Death();
         }
 
         currentTimeAttack = 0.0f;
 
         //Coroutine para animar dano;
         StartCoroutine(StrikeCoroutine());
+    }
+
+    private void Death()
+    {
+        dying = true;
+        attacking = false;
+        striking = false;
+        chargingAttack = false;
     }
 
     IEnumerator StrikeCoroutine()
@@ -107,16 +131,18 @@ public class Monster : MonoBehaviour
     {
         if(hit)
         {
-            if(isAttackOpportunity)
+            if(opportunity)
             {
+                blow = 1;
                 player.Strike(damage/2);
-                hit = false;
             }
             else
             {
+                blow = 0;
                 player.Strike(damage);
-                hit = false;
             }
+
+            hit = false;
         }
     }
 
@@ -132,33 +158,42 @@ public class Monster : MonoBehaviour
         }
     }
 
+    //Ataque básico
     public void Attack()
     {
-        chargingAttack = false;
-        attacking = true;
-        currentHitTime = 0.0f;
+        if(!attacking && !opportunity)
+        {
+            chargingAttack = false;
+            attacking = true;
+            currentBlowTime = 0.0f;
+        }
     }
 
     //Ataque de oportunidade
     public void AttackOpportunity()
     {
-        chargingAttack = false;
-        attacking = true;
-        isAttackOpportunity = true;
+        if(!attacking && !opportunity)
+        {
+            chargingAttack = false;
+            opportunity = true;
+            currentBlowTime = 0.0f;
+        }
     }
 
-    private void HitControll()
+    private void BlowControll()
     {
-        if(attacking)
+        if(attacking || opportunity)
         {
-            currentHitTime += Time.deltaTime;
-            if(currentHitTime <= hitTime[0])
+            blow = opportunity ? 1 : 0;
+            currentBlowTime += Time.deltaTime;
+
+            if(currentBlowTime <= blows[blow].initTime)
             {
                 preparing = true;
                 hitting = false;
                 recovering = false;
             }
-            if(currentHitTime > hitTime[0] && currentHitTime <= hitTime[1] && hitting == false)
+            if(currentBlowTime > blows[blow].initTime && currentBlowTime <= blows[blow].activeTime && hitting == false)
             {
                 preparing = false;
                 hitting = true;
@@ -166,25 +201,25 @@ public class Monster : MonoBehaviour
 
                 hit = true;
             }
-            else if(currentHitTime > hitTime[1] && currentHitTime < hitTime[2])
+            else if(currentBlowTime > blows[blow].activeTime && currentBlowTime < blows[blow].recoverTime)
             {
                 preparing = false;
                 hitting = false;
                 recovering = true;
             }
-            else if(currentHitTime >= hitTime[2])
+            else if(currentBlowTime >= blows[blow].recoverTime)
             {
                 preparing = false;
                 hitting = false;
                 recovering = false;
                 
-                currentHitTime = 0;
+                currentBlowTime = 0;
 
-                currentTimeAttack = isAttackOpportunity ? currentTimeAttack/2 : 0.0f;
+                currentTimeAttack = opportunity ? currentTimeAttack/2 : 0.0f;
 
                 attacking = false;
                 chargingAttack = true;
-                isAttackOpportunity = false;
+                opportunity = false;
             }
         }
     }
@@ -192,6 +227,7 @@ public class Monster : MonoBehaviour
     private void AnimControll()
     {
         anim.SetBool("Attacking", attacking);
+        anim.SetBool("Opportunity", opportunity);
         anim.SetBool("Dying", dying);
         anim.SetBool("Striking", striking);
     }
