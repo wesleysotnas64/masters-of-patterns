@@ -43,9 +43,12 @@ public class Monster : MonoBehaviour
     public float strikingTime;
     public SpriteRenderer spriteRenderer;
 
+    public AudioSource audioSource;
+    public bool bossForm2;
+
     void Start()
     {
-        ready = false;
+        ready = true;
         currentTimeAttack = 0;
         player = GameObject.Find("Player").GetComponent<Player>();
 
@@ -65,6 +68,8 @@ public class Monster : MonoBehaviour
         //Striked Controller
         striking = false;
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        audioSource = GetComponent<AudioSource>();
 
     }
 
@@ -87,6 +92,8 @@ public class Monster : MonoBehaviour
 
     public void Strike(int _damage)
     {
+
+        audioSource.Play();
         
         healthPoints -= _damage;
         if (healthPoints <= 0)
@@ -94,6 +101,7 @@ public class Monster : MonoBehaviour
             healthPoints = 0;
             Death();
         }
+
 
         currentTimeAttack = 0.0f;
 
@@ -107,6 +115,8 @@ public class Monster : MonoBehaviour
         attacking = false;
         striking = false;
         chargingAttack = false;
+
+        GameObject.Find("ModalGameOver").GetComponent<ModalGameOver>().SetWinner();
     }
 
     IEnumerator StrikeCoroutine()
@@ -114,6 +124,7 @@ public class Monster : MonoBehaviour
         float elapsed = strikingTime;
 
         striking = true;
+        if(bossForm2) StartCoroutine(GetComponent<BossForm2>().Hitted());
         while(elapsed > 0)
         {
             elapsed -= Time.deltaTime;
@@ -131,6 +142,7 @@ public class Monster : MonoBehaviour
     {
         if(hit)
         {
+            // audioSource.Play();
             if(opportunity)
             {
                 blow = 1;
@@ -148,8 +160,10 @@ public class Monster : MonoBehaviour
 
     private void ChargeAttack()
     {
+
         if(chargingAttack)
         {
+            chargingAttack = GameObject.Find("Player").GetComponent<Player>().healthPoints <= 0 ? false : true;
             currentTimeAttack += Time.deltaTime;
             if(currentTimeAttack > timeAttack)
             {
@@ -166,6 +180,7 @@ public class Monster : MonoBehaviour
             chargingAttack = false;
             attacking = true;
             currentBlowTime = 0.0f;
+            if(bossForm2) StartCoroutine(GetComponent<BossForm2>().AttackPrimary());
         }
     }
 
@@ -177,6 +192,8 @@ public class Monster : MonoBehaviour
             chargingAttack = false;
             opportunity = true;
             currentBlowTime = 0.0f;
+
+            if(bossForm2) StartCoroutine(GetComponent<BossForm2>().AttackOpportunity());
         }
     }
 
@@ -215,7 +232,7 @@ public class Monster : MonoBehaviour
                 
                 currentBlowTime = 0;
 
-                currentTimeAttack = opportunity ? currentTimeAttack/2 : 0.0f;
+                currentTimeAttack = opportunity ? currentTimeAttack*0.75f : 0.0f;
 
                 attacking = false;
                 chargingAttack = true;
@@ -226,10 +243,13 @@ public class Monster : MonoBehaviour
 
     private void AnimControll()
     {
-        anim.SetBool("Attacking", attacking);
-        anim.SetBool("Opportunity", opportunity);
-        anim.SetBool("Dying", dying);
-        anim.SetBool("Striking", striking);
+        if(anim != null)
+        {
+            anim.SetBool("Attacking", attacking);
+            anim.SetBool("Opportunity", opportunity);
+            anim.SetBool("Dying", dying);
+            anim.SetBool("Striking", striking);
+        }
     }
 }
 

@@ -81,7 +81,7 @@ public class CameraShake : MonoBehaviour
                 break;
             
             default:
-                magnitude = 0.05f;
+                magnitude = 0.4f;
                 break;
         }
     }

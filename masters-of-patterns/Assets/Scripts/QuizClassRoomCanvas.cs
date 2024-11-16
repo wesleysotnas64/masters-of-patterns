@@ -63,7 +63,7 @@ public class QuizClassRoomCanvas : MonoBehaviour
             }
         }
 
-        GameObject q = Resources.Load<GameObject>("QuizQuestions/QuizQuestion_"+randomId.ToString());
+        GameObject q = Resources.Load<GameObject>("QuizQuestions/QuizQuestion"+randomId.ToString());
         currentQuestion = q.GetComponent<Question>();
 
         RenderQuestion();

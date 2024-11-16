@@ -34,8 +34,13 @@ public class QuizCanvasController : MonoBehaviour
     public Monster monster;
     public bool firstCall;
 
+    [Header("Next Question")]
+    public float nextQuestionTime;
+    public bool ready;
+
     void Start()
     {
+        ready = true;
         //inicializar Canvas
         InitCanvas();
 
@@ -48,7 +53,7 @@ public class QuizCanvasController : MonoBehaviour
 
     void Update()
     {
-        UpdateCanvas();
+        if(ready) UpdateCanvas();
     }
 
     public void NextQuestion()
@@ -83,10 +88,18 @@ public class QuizCanvasController : MonoBehaviour
         }
 
         DisableOptionButtons();
-        btnNext.interactable = true;
+        // btnNext.interactable = true;
+
+        if(monster.healthPoints>0) StartCoroutine(NextQuestionInTimer());
     }
 
-    private void InitCanvas()
+    IEnumerator NextQuestionInTimer()
+    {
+        yield return new WaitForSeconds(nextQuestionTime);
+        NextQuestion();
+    }
+
+    public void InitCanvas()
     {
         textQuestion.text = "";
         textPlayerHealth.text = player.healthPoints.ToString()+"/"+player.maxHealthPoints.ToString();
@@ -104,7 +117,7 @@ public class QuizCanvasController : MonoBehaviour
         }
     }
 
-    private void UpdateCanvas()
+    public void UpdateCanvas()
     {
         textPlayerHealth.text = player.healthPoints.ToString()+"/"+player.maxHealthPoints.ToString();
 
@@ -183,11 +196,11 @@ public class QuizCanvasController : MonoBehaviour
 
         EnableOptionButtons();
 
-        if(firstCall)
-        {
-            monster.ready = true;;
-            firstCall = false;
-        }
+        // if(firstCall)
+        // {
+        //     monster.ready = true;
+        //     firstCall = false;
+        // }
     }
 
     private void EnableToolsButtons()
@@ -214,7 +227,7 @@ public class QuizCanvasController : MonoBehaviour
         }
     }
 
-    private void DisableOptionButtons()
+    public void DisableOptionButtons()
     {
         foreach(GameObject btn in listOptionButton)
         {
