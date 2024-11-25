@@ -51,6 +51,11 @@ public class QuestionHandler : MonoBehaviour
                 maxId = 55;
                 break;
 
+            case "Reutilization":
+                minId = 56;
+                maxId = 71;
+                break;
+
             default:
                 break;
         }

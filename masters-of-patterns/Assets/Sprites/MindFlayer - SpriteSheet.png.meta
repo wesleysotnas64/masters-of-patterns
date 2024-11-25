@@ -1,0 +1,1570 @@
+fileFormatVersion: 2
+guid: 01f5f616dfc6c534ba399ce640342003
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 672
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09b1585590bed9149a75bbd37bcb2717
+      internalID: 847911435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 672
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48b830b450e5cc14e8d6b854fc335165
+      internalID: 1899572504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 672
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10dc7943f09d6ea47b9c666629ae0cda
+      internalID: 1921396827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 672
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14b609ca03616e3478b1a7946022757d
+      internalID: 841408576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 672
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49afd0386256f454db297221b0336f98
+      internalID: -529985712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 672
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d40e375cf553bd4b9a5246e8c2a5c4d
+      internalID: -1812702994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 672
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aecb4075128e69468b5a6d0b804492d
+      internalID: -1399697366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 672
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 625020e77920fd04983d23c537540f1d
+      internalID: 101785167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 672
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 102e88ed49484504d887c1bcb2a1b4ac
+      internalID: 1920550531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 672
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c3b359b491982d4aa1120910ec90a3e
+      internalID: -344983037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 672
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b13c34e0623a8419165bfd0d95d20a
+      internalID: -668409345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 2112
+        y: 672
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5b3d5449e2888d48a0a6658855f8300
+      internalID: 1278621574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 672
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6bc61a204df60d4c9a22d79c5c12a46
+      internalID: 207725129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 672
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81937ba5aeb66cf4eadcfda8524f34bc
+      internalID: 1407749393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 672
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5352255d08ec28458ebc99212da471d
+      internalID: -2041828350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 560
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6551da3deaa42824ba2a791d4f3e8acf
+      internalID: -379229781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 560
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2e14553178afbe489dc11ba979a155b
+      internalID: 1154455934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 560
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7780f8bf6bf772e4586f23318a1394bc
+      internalID: -1234995260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 560
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0daed1a229b39d4f8ae6115574c1554
+      internalID: 5316347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 560
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8530b638cf5832943a54cc10400ade85
+      internalID: 110654127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 560
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04e9ea8f938d54946a53b18d1782ec70
+      internalID: -252705322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 560
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db4839cf42291df4fb28c96feba09aa9
+      internalID: 2099713872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 560
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee010c93684d0d048b9091b12e2aa927
+      internalID: 1521036842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 560
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a90dda5e2d691c4daf0a7cd68a9cb79
+      internalID: 884394005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 560
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c641e125f343d4f43a70852225311b61
+      internalID: 1971835174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 560
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9618b9803a3c884fbab775cc15bcbca
+      internalID: -780126460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 2112
+        y: 560
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aa4ed0c4ad46944e9824018a728011c
+      internalID: -436081003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4261794f2424bd4e901e02e8db30086
+      internalID: -830248258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 448
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04edc825e98c1e44eba61d931e369a4c
+      internalID: -2044952455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 448
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57ae34eae02551a489ebdb1d2736d8ed
+      internalID: -1405581411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 448
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f6f57f713998f47b25cdd4365637ac
+      internalID: 2075555757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_31
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 448
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65d942526b1291a4f910ec15a86c42b8
+      internalID: 1918616417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_32
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 448
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd9b3c596d7dd6b4da24cc61590f9f01
+      internalID: -432883411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 336
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 212676e1132a3f84aa0665291dc31825
+      internalID: -852261664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_34
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 336
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f23500b945fd32640b9e32efe26bd833
+      internalID: 907828881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_35
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 336
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fa7d6007b206ad469b8ef4f634c5fd4
+      internalID: -520935992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_36
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 336
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a05957eb2db87234f9702f940c2f99d7
+      internalID: -1906808061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_37
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 336
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31a0bbe750799d24cb0c5df38bebe974
+      internalID: -1174007738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_38
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 336
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a848336250cab3e498c509048abdb81f
+      internalID: 1090259074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_39
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 336
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f3e9a23e0651f14cbfadd897e4ec7c6
+      internalID: 412889693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30a9ed98708b3734c9b91762042a97cb
+      internalID: -1533733172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_41
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 224
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ce21ff1578a54478ac77004bd17559
+      internalID: -653933836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_42
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 224
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f128391353b98443a1fcd225384e72f
+      internalID: -709193972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_43
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 224
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 201742da14da91c4d99d87af0cb03ae4
+      internalID: -326056102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_44
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 224
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aa12618032fed640ac77ae22e5de89a
+      internalID: -1236207162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_45
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 224
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3662f765244422b43bcfc7f1f6c724fd
+      internalID: 1327767013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_46
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 224
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1c14434a32d4dc4e96655b9ec7d5275
+      internalID: 2091956221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_47
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 224
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3e1b397abc549b4a9398be832952c74
+      internalID: -2026743895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_48
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 224
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c341bb2c690e38418559b65185e3526
+      internalID: 282899689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 112
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3c9d1949158ca4d9d023b3d89ae75c
+      internalID: 63695826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_50
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 112
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe1cd928c4bb3d74da0d6d9187cec333
+      internalID: -1949106226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_51
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 112
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cff9259704a6724d9ac927b6055d659
+      internalID: -1645790123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_52
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 112
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbab1d2619fcbfc4b80b4d511969a0c8
+      internalID: -1856877464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_53
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 112
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5780ae2bc7dc2014a92ba7199981a390
+      internalID: -1952830706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc9a07348c298b4448dd4f0b125c5f03
+      internalID: -624042894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_55
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5dd77d8dcf25654db18b07837816d6b
+      internalID: -129397277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_56
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 117b1f13e5dbcfe468bc0c03a609b026
+      internalID: -2113114553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_57
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3ae686ebd17f374695d21dd4d92f1f7
+      internalID: 568528781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_58
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5570a654281be3c45b2b3ed1b0f2d661
+      internalID: 1828245265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_59
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dddc4896a5904d048938370cf1767213
+      internalID: -895743860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_60
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d04f9dc5608b554196bf0e8d4f5aeb3
+      internalID: 1706137409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_61
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 0
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aac67a9670c1ffc44a09a9ed70356b51
+      internalID: 1423889926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_62
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a63db2e96962354cac853f6c306e041
+      internalID: -805141234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_63
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 0
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3da37a757f077948ba53001f28aa61f
+      internalID: -1644469157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MindFlayer - SpriteSheet_64
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 192
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68e581d92ae92164e8932463f42e8d9d
+      internalID: 1811339269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      MindFlayer - SpriteSheet_0: 847911435
+      MindFlayer - SpriteSheet_1: 1899572504
+      MindFlayer - SpriteSheet_10: -668409345
+      MindFlayer - SpriteSheet_11: 1278621574
+      MindFlayer - SpriteSheet_12: 207725129
+      MindFlayer - SpriteSheet_13: 1407749393
+      MindFlayer - SpriteSheet_14: -2041828350
+      MindFlayer - SpriteSheet_15: -379229781
+      MindFlayer - SpriteSheet_16: 1154455934
+      MindFlayer - SpriteSheet_17: -1234995260
+      MindFlayer - SpriteSheet_18: 5316347
+      MindFlayer - SpriteSheet_19: 110654127
+      MindFlayer - SpriteSheet_2: 1921396827
+      MindFlayer - SpriteSheet_20: -252705322
+      MindFlayer - SpriteSheet_21: 2099713872
+      MindFlayer - SpriteSheet_22: 1521036842
+      MindFlayer - SpriteSheet_23: 884394005
+      MindFlayer - SpriteSheet_24: 1971835174
+      MindFlayer - SpriteSheet_25: -780126460
+      MindFlayer - SpriteSheet_26: -436081003
+      MindFlayer - SpriteSheet_27: -830248258
+      MindFlayer - SpriteSheet_28: -2044952455
+      MindFlayer - SpriteSheet_29: -1405581411
+      MindFlayer - SpriteSheet_3: 841408576
+      MindFlayer - SpriteSheet_30: 2075555757
+      MindFlayer - SpriteSheet_31: 1918616417
+      MindFlayer - SpriteSheet_32: -432883411
+      MindFlayer - SpriteSheet_33: -852261664
+      MindFlayer - SpriteSheet_34: 907828881
+      MindFlayer - SpriteSheet_35: -520935992
+      MindFlayer - SpriteSheet_36: -1906808061
+      MindFlayer - SpriteSheet_37: -1174007738
+      MindFlayer - SpriteSheet_38: 1090259074
+      MindFlayer - SpriteSheet_39: 412889693
+      MindFlayer - SpriteSheet_4: -529985712
+      MindFlayer - SpriteSheet_40: -1533733172
+      MindFlayer - SpriteSheet_41: -653933836
+      MindFlayer - SpriteSheet_42: -709193972
+      MindFlayer - SpriteSheet_43: -326056102
+      MindFlayer - SpriteSheet_44: -1236207162
+      MindFlayer - SpriteSheet_45: 1327767013
+      MindFlayer - SpriteSheet_46: 2091956221
+      MindFlayer - SpriteSheet_47: -2026743895
+      MindFlayer - SpriteSheet_48: 282899689
+      MindFlayer - SpriteSheet_49: 63695826
+      MindFlayer - SpriteSheet_5: -1812702994
+      MindFlayer - SpriteSheet_50: -1949106226
+      MindFlayer - SpriteSheet_51: -1645790123
+      MindFlayer - SpriteSheet_52: -1856877464
+      MindFlayer - SpriteSheet_53: -1952830706
+      MindFlayer - SpriteSheet_54: -624042894
+      MindFlayer - SpriteSheet_55: -129397277
+      MindFlayer - SpriteSheet_56: -2113114553
+      MindFlayer - SpriteSheet_57: 568528781
+      MindFlayer - SpriteSheet_58: 1828245265
+      MindFlayer - SpriteSheet_59: -895743860
+      MindFlayer - SpriteSheet_6: -1399697366
+      MindFlayer - SpriteSheet_60: 1706137409
+      MindFlayer - SpriteSheet_61: 1423889926
+      MindFlayer - SpriteSheet_62: -805141234
+      MindFlayer - SpriteSheet_63: -1644469157
+      MindFlayer - SpriteSheet_64: 1811339269
+      MindFlayer - SpriteSheet_7: 101785167
+      MindFlayer - SpriteSheet_8: 1920550531
+      MindFlayer - SpriteSheet_9: -344983037
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
