@@ -55,6 +55,7 @@ public class BossFightController : MonoBehaviour
     {
         //Instanciar o Boss forma 1
         bossForm1.SetActive(true);
+        bossForm1.GetComponent<Monster>().chargingAttack = false;
 
         //Tocar a música da intro forma 1
         audioSource.clip = audioClipBossF1Intro;
@@ -71,6 +72,8 @@ public class BossFightController : MonoBehaviour
         audioSource.clip = audioClipBossF1Gameplay;
         audioSource.loop = true;
         audioSource.Play();
+
+        bossForm1.GetComponent<Monster>().chargingAttack = true;
     }
 
     IEnumerator BossF1Surgindo()
@@ -91,6 +94,7 @@ public class BossFightController : MonoBehaviour
 
     IEnumerator BossF1Morrendo()
     {
+        bossForm1.GetComponent<Monster>().chargingAttack = false;
         float elapsed = 5.0f;
         float time = 5.0f;
         while(elapsed > 0)
@@ -106,6 +110,7 @@ public class BossFightController : MonoBehaviour
 
     IEnumerator BossF2Morrendo()
     {
+        bossForm2.GetComponent<Monster>().chargingAttack = false;
         float elapsed = 5.0f;
         while(elapsed > 0)
         {
@@ -118,7 +123,6 @@ public class BossFightController : MonoBehaviour
 
     IEnumerator BossPresentationForm2()
     {
-
         audioSource.clip = audioclipBossF2Presentation;
         audioSource.loop = false;
         audioSource.Play();
@@ -126,6 +130,7 @@ public class BossFightController : MonoBehaviour
         yield return new WaitForSeconds(5);
 
         bossForm2.SetActive(true);
+        bossForm2.GetComponent<Monster>().chargingAttack = false;
 
         audioSource.clip = audioClipBossF2Intro;
         audioSource.loop = false;
@@ -145,6 +150,8 @@ public class BossFightController : MonoBehaviour
         audioSource.loop = true;
         audioSource.Play();
 
+        bossForm2.GetComponent<Monster>().chargingAttack = true;
+
     }    
 
     IEnumerator VerifyF1Dead()
@@ -157,7 +164,7 @@ public class BossFightController : MonoBehaviour
 
         audioSource.clip = audioClipBossRoarDeathForm1;
         audioSource.loop = false;
-        audioSource.volume = 0.5f;
+        audioSource.volume = 1.0f;
         audioSource.Play();
         // bossForm1.GetComponent<Monster>().ready = false;
         StartCoroutine(BossF1Morrendo());
@@ -165,7 +172,7 @@ public class BossFightController : MonoBehaviour
 
         audioSource.clip = audioClipThunder;
         audioSource.loop = false;
-        audioSource.volume = 0.5f;
+        audioSource.volume = 1.0f;
         audioSource.Play();
 
         yield return new WaitForSeconds(5);
@@ -182,7 +189,7 @@ public class BossFightController : MonoBehaviour
 
         audioSource.clip = audioClipBossRoarDeathForm2;
         audioSource.loop = false;
-        audioSource.volume = 0.5f;
+        audioSource.volume = 1.0f;
         audioSource.Play();
         StartCoroutine(BossF2Morrendo());
         yield return new WaitForSeconds(10);

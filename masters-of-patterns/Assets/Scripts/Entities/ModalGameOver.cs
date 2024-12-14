@@ -14,6 +14,11 @@ public class ModalGameOver : MonoBehaviour
     public void SetWinner()
     {
         GameObject.Find("MainCamera").GetComponent<AudioSource>().Stop();
+        try{
+            GameObject.Find("BossFigthController").GetComponent<AudioSource>().Stop();
+        }
+        catch{
+        }
         mainText.text = "Vitória!";
         audioSource.clip = soundWin;
         RenderModal();
@@ -22,6 +27,11 @@ public class ModalGameOver : MonoBehaviour
     public void SetLoser()
     {
         GameObject.Find("MainCamera").GetComponent<AudioSource>().Stop();
+        try{
+            GameObject.Find("BossFigthController").GetComponent<AudioSource>().Stop();
+        }
+        catch{
+        }
         mainText.text = "Derrota!";
         audioSource.clip = soundLose;
         RenderModal();

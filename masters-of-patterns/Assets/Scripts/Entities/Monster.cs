@@ -58,7 +58,7 @@ public class Monster : MonoBehaviour
         dying = false;
         
         //Attack Controller
-        chargingAttack = true;
+        chargingAttack = false;
         preparing = false;
         hitting = false;
         recovering = false;
@@ -116,7 +116,10 @@ public class Monster : MonoBehaviour
         striking = false;
         chargingAttack = false;
 
-        GameObject.Find("ModalGameOver").GetComponent<ModalGameOver>().SetWinner();
+        if(bossForm2)
+        {
+            GameObject.Find("ModalGameOver").GetComponent<ModalGameOver>().SetWinner();
+        }
     }
 
     IEnumerator StrikeCoroutine()
