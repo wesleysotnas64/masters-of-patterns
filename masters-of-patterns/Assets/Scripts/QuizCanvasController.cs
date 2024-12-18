@@ -40,14 +40,14 @@ public class QuizCanvasController : MonoBehaviour
 
     void Start()
     {
-        // ready = true;
+        ready = true;
         //inicializar Canvas
         InitCanvas();
 
         //Selecionar questão para o buffer
-        // firstCall = true;
-        // currentQuestion = questionHandler.GetRandomQuestioin();
-        // StartCoroutine(TypewriteText());
+        firstCall = true;
+        currentQuestion = questionHandler.GetRandomQuestioin();
+        StartCoroutine(TypewriteText());
 
     }
 

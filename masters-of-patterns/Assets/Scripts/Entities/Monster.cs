@@ -58,7 +58,7 @@ public class Monster : MonoBehaviour
         dying = false;
         
         //Attack Controller
-        chargingAttack = false;
+        chargingAttack = true;
         preparing = false;
         hitting = false;
         recovering = false;

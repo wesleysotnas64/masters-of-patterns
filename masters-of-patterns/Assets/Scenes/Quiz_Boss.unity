@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1363,12 +1362,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   calledQuestionsId: 
-  maxQuestionsCalled: 30
+  maxQuestionsCalled: 5
   subjects:
-  - Arquitetura
-  - Metodologias
-  - PrincipiosProjeto
-  - Reutilization
+  - SOLID
   currentSubject: 
 --- !u!4 &593176243
 Transform:
@@ -1899,9 +1895,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 486f5ad8007a3c74daf02287e7359d77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 18
-  maxHealthPoints: 18
-  timeAttack: 20
+  healthPoints: 4
+  maxHealthPoints: 4
+  timeAttack: 10
   currentTimeAttack: 0
   damage: 8
   attacking: 0
@@ -2604,11 +2600,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7271787975725521887, guid: 52aff21aa7e42e046b7b8d0b0d483aa7, type: 3}
       propertyPath: timeAttack
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7271787975725521887, guid: 52aff21aa7e42e046b7b8d0b0d483aa7, type: 3}
       propertyPath: healthPoints
-      value: 12
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7271787975725521887, guid: 52aff21aa7e42e046b7b8d0b0d483aa7, type: 3}
       propertyPath: strikingTime
@@ -2616,7 +2612,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7271787975725521887, guid: 52aff21aa7e42e046b7b8d0b0d483aa7, type: 3}
       propertyPath: maxHealthPoints
-      value: 12
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7271787975725521887, guid: 52aff21aa7e42e046b7b8d0b0d483aa7, type: 3}
       propertyPath: blows.Array.data[0]
@@ -4899,12 +4895,12 @@ MonoBehaviour:
   m_RequiresColorTexture: 0
   m_Version: 2
   m_TaaSettings:
-    quality: 3
-    frameInfluence: 0.1
-    jitterScale: 1
-    mipBias: 0
-    varianceClampScale: 0.9
-    contrastAdaptiveSharpening: 0
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!114 &1430564352
 MonoBehaviour:
   m_ObjectHideFlags: 0
