@@ -1365,6 +1365,7 @@ MonoBehaviour:
   maxQuestionsCalled: 5
   subjects:
   - SOLID
+  - PadroesGoF
   currentSubject: 
 --- !u!4 &593176243
 Transform:
@@ -1895,11 +1896,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 486f5ad8007a3c74daf02287e7359d77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 4
-  maxHealthPoints: 4
-  timeAttack: 10
+  healthPoints: 17
+  maxHealthPoints: 17
+  timeAttack: 20
   currentTimeAttack: 0
-  damage: 8
+  damage: 10
   attacking: 0
   dying: 0
   striking: 0
@@ -2596,15 +2597,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7271787975725521887, guid: 52aff21aa7e42e046b7b8d0b0d483aa7, type: 3}
       propertyPath: damage
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7271787975725521887, guid: 52aff21aa7e42e046b7b8d0b0d483aa7, type: 3}
       propertyPath: timeAttack
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7271787975725521887, guid: 52aff21aa7e42e046b7b8d0b0d483aa7, type: 3}
       propertyPath: healthPoints
-      value: 4
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7271787975725521887, guid: 52aff21aa7e42e046b7b8d0b0d483aa7, type: 3}
       propertyPath: strikingTime
@@ -2612,7 +2613,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7271787975725521887, guid: 52aff21aa7e42e046b7b8d0b0d483aa7, type: 3}
       propertyPath: maxHealthPoints
-      value: 4
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7271787975725521887, guid: 52aff21aa7e42e046b7b8d0b0d483aa7, type: 3}
       propertyPath: blows.Array.data[0]
@@ -6390,7 +6391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPoints: 35
   maxHealthPoints: 35
-  damage: 3
+  damage: 4
   cameraShake: {fileID: 0}
   audioSource: {fileID: 0}
 --- !u!82 &1921519317

@@ -46,8 +46,8 @@ public class QuizCanvasController : MonoBehaviour
 
         //Selecionar questão para o buffer
         firstCall = true;
-        currentQuestion = questionHandler.GetRandomQuestioin();
-        StartCoroutine(TypewriteText());
+        // currentQuestion = questionHandler.GetRandomQuestioin();
+        // StartCoroutine(TypewriteText());
 
     }
 
