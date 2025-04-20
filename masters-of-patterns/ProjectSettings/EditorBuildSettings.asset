@@ -5,7 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: ad72cbdcea6e7af46b5702cdb0b47ed0
+  - enabled: 1
+    path: Assets/Scenes/Quiz_Boss.unity
+    guid: 85e5e59d28a661b4983830fec48cb01e
+  - enabled: 1
+    path: Assets/Scenes/Quiz_Monstro_1_Fase.unity
+    guid: 478b434d8ba5fc2408ca686d56c5071c
+  - enabled: 1
+    path: Assets/Scenes/Quiz_Monstro_2_Fase.unity
+    guid: 0e85bfa5c7ca6b3468bd5b8f9764d709
+  - enabled: 1
+    path: Assets/Scenes/Quiz_Monstro_3_Fase.unity
+    guid: 0112733ffa0625845a959c5ad118a223
+  - enabled: 1
+    path: Assets/Scenes/SelectSubject.unity
+    guid: 707b959f3ed3d1c4394d90fec4bd391e
   m_configObjects: {}
